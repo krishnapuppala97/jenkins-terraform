@@ -5,7 +5,7 @@ resource "aws_instance" "my_server"{
     count = "${var.instance}"
     ami = "${var.ami}"
     instance_type = "${var.instance_type}"
-    security_groups = ["scq_name"]
+    security_groups = []
     user_data = <<-EOF
               #!/bin/bash
               sudo apt ubuntu -y
