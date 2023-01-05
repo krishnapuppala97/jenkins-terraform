@@ -25,9 +25,11 @@ resource "aws_security_group" "my_scq" {
     cidr_blocks      = ["0.0.0.0/0"]
     #ipv6_cidr_blocks = ["::/0"]
   }
+/*
   depends_on = [
     aws_vpc.myvpc
   ]
+    */
   
   tags = {
     Name = "new_scq"
