@@ -25,9 +25,11 @@ resource "aws_instance" "my_server"{
     key_name = "newkeypair"
    # vpc_id = "${aws_vpc.myvpc.id}"
     subnet_id = "${aws_subnet.mypubsub.id}"
+    /*
     depends_on = [
       aws_security_group.my_scq
     ]
+    */
     tags = {
       Name = "ec2server"
     }
